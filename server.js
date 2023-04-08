@@ -56,18 +56,7 @@ app.post('/api/notes', (req, res) => {
       
     // readAndAppend(newNote, './db/db.json');
     fs.writeFile('./db/db.json', JSON.stringify(notes), err => { if (err) console.log(err) });
-  
-      const response = {
-        status: 'success',
-        body: newNote,
-      };
-  
-      console.log(response);
-      res.status(201).json(response);
-    } else {
-      res.status(500).json('Error in posting note');
-    }
-  });
+}});
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
