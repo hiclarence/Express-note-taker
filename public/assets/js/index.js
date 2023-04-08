@@ -40,14 +40,8 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  })
-  .then((response) => response.json())
-  .then((data) => {
-    // createCard(tip);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });;
+  }).then(getAndRenderNotes())
+  .catch((err) => console.log(err));
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -59,7 +53,6 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
-  console.log(`render function hit`)
   
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
