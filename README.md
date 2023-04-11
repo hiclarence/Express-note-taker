@@ -2,10 +2,10 @@
 
 # Description
 
-This application leverages Express to display, store, and retrieve notes from a note taker app.  The purpose of this applicaaiton was to exercise specific functionalities:
+This application leverages Express to display, store, and retrieve notes from a note taker app.  The purpose of this application was to exercise specific functionalities:
 
-- Create get requests to retrieve and display notes stored in a database and for the data to be persisted through usage
-- Create post requests to write notes to the databas
+- Create get requests to retrieve and display notes stored in a JSON file, display html pages, and to persist data through usage
+- Create post requests to write notes to the database with a unique ID
 
 # Installation
 
@@ -23,3 +23,4 @@ To install, please use
 
 # Heroku Link
 
+[Link](https://express-note-taker1.herokuapp.com/)
